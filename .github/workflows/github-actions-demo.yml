@@ -21,6 +21,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install django
       - name: Run server
+        env:
+          DJANGO_ALLOWED_HOSTS: localhost 127.0.0.1 [::1]
+          DEBUG_MODE: False
         run: |
           python mysite/manage.py test
       - name: Test with pytest
