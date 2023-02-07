@@ -22,7 +22,7 @@ jobs:
           python -m pip install django
       - name: Run server
         run: |
-          python mysite/manage.py runserver
+          python mysite/manage.py test
       - name: Test with pytest
         run: |
           pip install pytest
